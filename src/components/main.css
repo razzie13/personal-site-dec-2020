@@ -1,0 +1,13 @@
+/* -------------------- */
+header {
+  background-color: #222F3E;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header a {
+  color: #F7F7F7;
+  text-decoration: none;
+}
+/*# sourceMappingURL=main.css.map */

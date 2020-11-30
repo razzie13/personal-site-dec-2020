@@ -1,0 +1,26 @@
+$colours: (
+    menu-bg-colour: #222F3E,
+    text-colour: #F7F7F7,
+
+    landing-colour: #0ABDE3,
+    portfolio-colour: #FF6B6B,
+    blog-colour: #C8D6E5,
+    resources-colour: #10AC84,
+    contact-colour: #576574
+);
+
+@function colour($colour-name)  {
+    @return map.get($colours, $colour-name)
+}
+
+/* -------------------- */
+
+header  {
+    background-color: colour(menu-bg-colour);
+    display: flex;
+
+    a  {
+        color: map-get($colours, text-colour);
+        text-decoration: none;
+    }
+}
