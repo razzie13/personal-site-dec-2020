@@ -6,7 +6,7 @@ import Navlinks from "./nav"
 
 const Header = ({ siteTitle }) => (
   <header>
-    <div>
+    <div id="header-inside">
       <h2>
         <Link to="/">{siteTitle}</Link>
       </h2>

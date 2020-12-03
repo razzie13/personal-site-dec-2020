@@ -1,26 +1,401 @@
-$colours: (
-    menu-bg-colour: #222F3E,
-    text-colour: #F7F7F7,
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap');
 
-    landing-colour: #0ABDE3,
-    portfolio-colour: #FF6B6B,
-    blog-colour: #C8D6E5,
-    resources-colour: #10AC84,
-    contact-colour: #576574
+$colours: (
+    menu-bg: #222F3E,
+    text-light: #F7F7F7,
+    text-dark: #222F3E,
+
+    landing: #0ABDE3,
+    portfolio: #FF6B6B,
+    blog: #C8D6E5,
+    contact: #10AC84,
+    aboutme: #576574,
+
+    landing-dark: darken(#0ABDE3, 25%)
 );
 
+$fonts:  (
+    header-title-font: ('Nunito', sans-serif, bold),
+    header-menu-font: ('Nunito', sans-serif, bold),
+    main-title-font: ('Nunito', sans-serif, bold),
+    main-hero-font: ('Nunito', sans-serif, bold)
+);
+
+$background-image-kw-map: url('../images/kw-map.jpg');
+
+$site-padding: 24px;
+
 @function colour($colour-name)  {
-    @return map.get($colours, $colour-name)
+    @return map-get($colours, $colour-name)
+};
+
+@function font($font-name)  {
+    @return map-get($fonts, $font-name)
+};
+
+$mobile-max-width: 480px;
+
+$tablet-max-width: 768px;
+
+$desktop-max-width: 1400px;
+
+@mixin mobile  {
+    @media (max-width: #{$mobile-max-width})  {
+        @content;
+    }
 }
+
+@mixin tablet  {
+    @media (max-width: #{$tablet-max-width})  {
+        @content;
+    }
+}
+
 
 /* -------------------- */
 
-header  {
-    background-color: colour(menu-bg-colour);
-    display: flex;
+body  {
+    margin: 0;
+    padding: 0;
+}
 
-    a  {
-        color: map-get($colours, text-colour);
+header  {
+    background-color: colour(menu-bg);
+    display: flex;
+    text-transform: uppercase;
+    font-family: font(header-title-font);
+    height: 80px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
+    #header-inside  {
+        margin: auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        max-width: $desktop-max-width;
+
+        @include tablet  {
+            box-sizing: border-box;
+            padding-left: 48px;
+            padding-right: 48px;
+        }
+
+        a  {
+            color: colour(text-light);
+            text-decoration: none;
+            font-weight: bold; 
+        }
+    
+        ul  {
+            display: flex;
+            padding-top: 9px;
+
+            @include mobile  {
+                display: none;
+            }
+        }
+    
+        ul li  {
+            display: flex;
+            padding-left: $site-padding;
+        }
+
+        ul li:first-child  {
+            @include tablet  {
+                display: none;
+            }
+        }
+        
+    }
+}
+
+#section-one .link-button:last-child  {
+    visibility: hidden;
+}
+
+#section-five .link-button:first-child  {
+    visibility: hidden;
+}
+
+
+
+.section-buttons:last-child  {
+    visibility: hidden;
+}
+
+.welcome  {
+    opacity: 0.77;
+    background-image: $background-image-kw-map;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1; 
+    color: colour(text-light);
+
+    .link-button  {
+        background-color: colour(blog);
+        color: colour(text-dark);
+        visibility: visible;
+    }
+}
+
+.welcome::after  {
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: -22px;
+    right: 0;
+    position: absolute;
+    background-color: colour(landing-dark);
+    z-index: -1;
+    opacity: .77;
+}
+
+.projects  {
+    background-color: colour(portfolio);
+    color: colour(text-light);
+
+    .link-button  {
+        background-color: colour(blog);
+        color: colour(text-dark);
+        visibility: visible;
+    }
+}
+
+.blog  {
+    background-color: colour(blog);
+    color: colour(text-dark);
+
+    .section-buttons button {
+        width: 20%;
+        background-color: #10AC84;
+        color: #F7F7F7;
+        border-radius: 12px;
+        border-style: none;
+        font-weight: bold;
+        font-size: 24px;
+        padding: 12px;
+    }
+
+    section .centre-section a {
+        text-decoration: underline;
+        color: colour(text-dark);
+    }
+
+    .link-button  {
+        background-color: colour(contact);
+        color: colour(text-light);
+        visibility: visible;
+    }
+}
+
+.contact  {
+    background-color: colour(contact);
+    color: colour(text-light);
+
+    .link-button  {
+        background-color: colour(blog);
+        color: colour(text-dark);
+        visibility: visible;
+    }
+}
+
+.aboutme  {
+    background-color: colour(aboutme);
+    color: colour(text-light);
+
+    .section-buttons button {
+        width: 20%;
+        background-color: #10AC84;
+        color: #F7F7F7;
+        border-radius: 12px;
+        border-style: none;
+        font-weight: bold;
+        font-size: 24px;
+        padding: 12px;
+    }
+
+    .link-button  {
+        background-color: colour(blog);
+        color: colour(text-dark);
+        visibility: visible;
+    }
+}
+
+.noh4 h4  {
+    display: none;
+}
+
+section.hero-area:nth-child(even)  {
+    flex-direction: row;
+}
+
+section.hero-area:nth-child(odd)  {
+    flex-direction: row-reverse;
+}
+
+section  {
+    width: 100%;
+    height: 100vh;
+
+    .centre-section  {
+        margin: auto;
+        width: 100%;
+        max-width: $desktop-max-width;  
+
+        h4 {
+            font-family: font(main-title-font);
+            padding-top: 24px;
+            text-transform: uppercase;
+
+            @include tablet  {
+                padding-left: 14%;
+            }
+
+            @include mobile  {
+                margin-top: 8px;
+                padding-top: 0;
+            }
+        }
+            
+            a  {
+                text-decoration: underline;
+                color: colour(text-light);
+            }
+    
+            a:hover  {
+                text-decoration: none;
+            }
+    }
+
+    
+    
+
+    h1  {
+        font-family: font(main-title-font);
+        text-transform: uppercase;
+        padding-top: 23vh;
+
+        @include tablet{
+            padding-left: 14%;
+            padding-top: 14vh;
+        }
+    }
+
+    .hero-area  {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10vh;
+
+        
+
+        @include tablet  {
+            flex-direction: column-reverse;
+            margin-top: 8vh;
+        }
+
+        @include mobile  {
+            margin-top: 5vh;
+        }
+    }
+
+    .hero-text  {
+        font-family: font(main-hero-font);
+        font-size: 32px;
+        font-weight: 700;
+        width: 50%;
+        padding-right: 5%;
+        box-sizing: border-box;
+
+        @include mobile  {
+            font-size: 24px;
+        }
+
+        @include tablet  {
+            width: 100%;
+            padding-right: 14%;
+            padding-top: 5%;
+            box-sizing: border-box;
+            padding-left: 14%;
+        }
+    }
+
+    .hero-image  {
+        width: 50%;
+        font-size: 160px;
+        display: flex;
+        justify-content: space-around;
+        padding-top: 56px;
+
+        @include tablet{
+            width: 100%;
+            font-size: 120px;
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 0;
+        }
+
+        @include mobile  {
+            font-size: 60px;
+            
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .section-buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 11vh auto auto auto;
+
+        @include mobile  {
+            margin-top: 4vh;
+        }
+    }
+
+    a.link-button {
+        color: white;
         text-decoration: none;
+        background-color: colour(contact);
+        border-style: none;
+        border-radius: 10px;
+        font-weight: bold;
+        padding: 16px;
+        width: 20%;
+        box-sizing: border-box;
+        text-align: center;
+        font-family: (font(main-title-font));
+        font-size: 1.5em;
+
+        @include tablet  {
+            width: 30%;
+        }
+
+        @include mobile  {
+            font-size: 1em;
+            line-height: 100%;
+        }
+    }
+
+    .section-buttons button  {
+        width: 20%;
+        border-radius: 12px;
+        border-style: none;
+        font-weight: bold;
+        font-size: 24px;
+        padding: 12px;
+
+        @include mobile  {
+            width: 30%;
+            font-size: 16px;
+            padding: 6px;
+        }
     }
 }

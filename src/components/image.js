@@ -23,6 +23,13 @@ const Image = () => {
           }
         }
       }
+      groceryStoreInsider: file(relativePath: {eq: "gsi.jpg"}) {
+        childImageSharp {
+          fluid(maxWidth: 700) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
