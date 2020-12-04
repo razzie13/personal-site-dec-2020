@@ -3,6 +3,8 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import { Link } from "gatsby"
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDesktop, faMobileAlt, faTabletAlt } from '@fortawesome/free-solid-svg-icons'
 
@@ -30,37 +32,37 @@ const IndexPage = () => (
             </div>
           </div>
         </div>
-        <div className="section-buttons">
-        <a className="link-button" href="#section-two">scroll down</a>
-        <a className="link-button" href="#">scroll up</a>
-            </div>
+          <div className="section-buttons">
+            <Link className="link-button" to="#section-two">scroll down</Link>
+            <Link className="link-button" to="#section-one">scroll up</Link>
+          </div>
       </section>
       <section className="projects" id="section-two">
         <ProjectsText />
         <div className="section-buttons">
-            <a className="link-button" href="#section-three">scroll down</a>
-            <a className="link-button" href="#section-one">scroll up</a>
+            <Link className="link-button" to="#section-three">scroll down</Link>
+            <Link className="link-button" to="#section-one">scroll up</Link>
           </div>
       </section>
       <section className="blog" id="section-three">
         <BlogText />
-        <div className="section-buttons">
-            <a className="link-button" href="#section-four">scroll down</a>
-            <a className="link-button" href="#section-two">scroll up</a>
+          <div className="section-buttons">
+            <Link className="link-button" to="#section-four">scroll down</Link>
+            <Link className="link-button" to="#section-two">scroll up</Link>
           </div>
       </section>
       <section className="aboutme" id="section-four">
         <AboutMeText />  
-        <div className="section-buttons">
-            <a className="link-button" href="#section-five">scroll down</a>
-            <a className="link-button" href="#section-three">scroll up</a>
+          <div className="section-buttons">
+            <Link className="link-button" to="#section-five">scroll down</Link>
+            <Link className="link-button" to="#section-three">scroll up</Link>
           </div>
       </section>
       <section className="contact" id="section-five">
         <ContactText />
-        <div className="section-buttons">
-        <a className="link-button" href="#">scroll down</a>
-        <a className="link-button" href="#section-four">scroll up</a>
+          <div className="section-buttons">
+            <Link className="link-button" to="#section-five">scroll down</Link>
+            <Link className="link-button" to="#section-four">scroll up</Link>
           </div> 
       </section>
   </Layout>

@@ -11,7 +11,10 @@ $colours: (
     contact: #10AC84,
     aboutme: #576574,
 
-    landing-dark: darken(#0ABDE3, 25%)
+    landing-dark: darken(#0ABDE3, 25%),
+
+    portfolio-light: lighten(#FF6B6B, 25%),
+    portfolio-dark: darken(#FF6B6B, 25%)
 );
 
 $fonts:  (
@@ -112,6 +115,11 @@ header  {
     }
 }
 
+.gatsby-image-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
 #section-one .link-button:last-child  {
     visibility: hidden;
 }
@@ -161,6 +169,27 @@ header  {
         background-color: colour(blog);
         color: colour(text-dark);
         visibility: visible;
+    }
+
+    section  {
+        height: 100%;
+    }
+
+    section:nth-child(2n+2)  {
+        background-color: colour(blog);
+        color: colour(text-dark);
+    }
+
+    #section-one  {
+        height: 100vh;
+    }
+
+    .hero-text p:first-child  {
+        font-size: 1.25em;
+    }
+
+    .hero-text p:nth-child(n+2)  {
+        font-size: 0.75em;
     }
 }
 

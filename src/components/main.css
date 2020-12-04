@@ -72,6 +72,11 @@ header #header-inside ul li {
   }
 }
 
+.gatsby-image-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
 #section-one .link-button:last-child {
   visibility: hidden;
 }
@@ -120,6 +125,27 @@ header #header-inside ul li {
   background-color: #C8D6E5;
   color: #222F3E;
   visibility: visible;
+}
+
+.projects section {
+  height: 100%;
+}
+
+.projects section:nth-child(2n+2) {
+  background-color: #C8D6E5;
+  color: #222F3E;
+}
+
+.projects #section-one {
+  height: 100vh;
+}
+
+.projects .hero-text p:first-child {
+  font-size: 1.25em;
+}
+
+.projects .hero-text p:nth-child(n+2) {
+  font-size: 0.75em;
 }
 
 .blog {
