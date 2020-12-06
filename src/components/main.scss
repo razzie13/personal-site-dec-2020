@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap');
+@import "form";
 
 $colours: (
     menu-bg: #222F3E,
@@ -51,6 +52,12 @@ $desktop-max-width: 1400px;
 @mixin tablet  {
     @media (max-width: #{$tablet-max-width})  {
         @content;
+    }
+}
+
+@mixin desktop  {
+    @media (min-width: #{$desktop-max-width})  {
+        @content
     }
 }
 
@@ -164,6 +171,8 @@ header  {
     font-size: 18px;
     text-transform: uppercase;
 }
+
+
 
 #section-two > div.centre-section > div > div.hero-text > p:nth-child(2)  {
 
@@ -304,6 +313,12 @@ header  {
         color: colour(text-dark);
         visibility: visible;
     }
+
+    #section-one > div:nth-child(2) > div > div.hero-text  {
+        @include desktop  {
+            width: 100%;
+        }
+    }
 }
 
 .aboutme  {
@@ -329,6 +344,12 @@ header  {
         background-color: colour(blog);
         color: colour(text-dark);
         visibility: visible;
+    }
+
+    #section-one > div:nth-child(2) > div > div.hero-text  {
+        @include desktop  {
+            width: 100%;
+        }
     }
 }
 

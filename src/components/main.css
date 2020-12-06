@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap");
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 /* -------------------- */
 body {
   margin: 0;
@@ -261,6 +271,12 @@ header #header-inside ul li {
   visibility: visible;
 }
 
+@media (min-width: 1400px) {
+  .contact #section-one > div:nth-child(2) > div > div.hero-text {
+    width: 100%;
+  }
+}
+
 .aboutme {
   background-color: #576574;
   color: #F7F7F7;
@@ -285,6 +301,12 @@ header #header-inside ul li {
   background-color: #C8D6E5;
   color: #222F3E;
   visibility: visible;
+}
+
+@media (min-width: 1400px) {
+  .aboutme #section-one > div:nth-child(2) > div > div.hero-text {
+    width: 100%;
+  }
 }
 
 .noh4 h4 {
