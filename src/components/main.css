@@ -19,6 +19,13 @@ header {
   z-index: 1;
 }
 
+@media (max-width: 480px) {
+  header ul {
+    background-color: red;
+    width: 100vw;
+  }
+}
+
 header #header-inside {
   margin: auto;
   width: 100%;
@@ -40,6 +47,15 @@ header #header-inside {
   }
 }
 
+@media (max-width: 480px) {
+  header #header-inside {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 header #header-inside a {
   color: #F7F7F7;
   text-decoration: none;
@@ -55,7 +71,9 @@ header #header-inside ul {
 
 @media (max-width: 480px) {
   header #header-inside ul {
-    display: none;
+    padding-top: 0px;
+    margin-top: -14px;
+    margin-left: -58px;
   }
 }
 
@@ -64,6 +82,12 @@ header #header-inside ul li {
   display: -ms-flexbox;
   display: flex;
   padding-left: 24px;
+}
+
+@media (max-width: 480px) {
+  header #header-inside ul li:nth-child(n+2) {
+    padding-left: 18px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -87,6 +111,22 @@ header #header-inside ul li {
 
 .section-buttons:last-child {
   visibility: hidden;
+}
+
+.hero-text h5 {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.hero-text h5:last-child {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 480px) {
+  #section-two > div.centre-section > div > div.hero-text > p:nth-child(2) {
+    display: none;
+  }
 }
 
 .welcome {
@@ -129,11 +169,42 @@ header #header-inside ul li {
 
 .projects section {
   height: 100%;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .projects section {
+    margin-bottom: -88px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects section {
+    margin-bottom: -44px;
+  }
+}
+
+.projects section:nth-child(1n+2) {
+  background-color: #C8D6E5;
+  color: #222F3E;
 }
 
 .projects section:nth-child(2n+2) {
-  background-color: #C8D6E5;
-  color: #222F3E;
+  background-color: #576574;
+  color: #F7F7F7;
+}
+
+@media (max-width: 480px) {
+  .projects section:nth-child(2n+2) {
+    background-color: #C8D6E5;
+    color: #222F3E;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects section:nth-child(2n+2) a {
+    color: #222F3E;
+  }
 }
 
 .projects #section-one {
@@ -180,6 +251,10 @@ header #header-inside ul li {
   color: #F7F7F7;
 }
 
+.contact section {
+  height: 100%;
+}
+
 .contact .link-button {
   background-color: #C8D6E5;
   color: #222F3E;
@@ -189,6 +264,10 @@ header #header-inside ul li {
 .aboutme {
   background-color: #576574;
   color: #F7F7F7;
+}
+
+.aboutme section {
+  height: 100%;
 }
 
 .aboutme .section-buttons button {
@@ -229,6 +308,7 @@ section.hero-area:nth-child(odd) {
 section {
   width: 100%;
   height: 100vh;
+  position: relative;
 }
 
 section .centre-section {
@@ -286,7 +366,7 @@ section .hero-area {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 10vh;
+  padding-top: 10vh;
 }
 
 @media (max-width: 768px) {
@@ -313,6 +393,10 @@ section .hero-text {
   padding-right: 5%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+section .hero-text li {
+  margin-bottom: 24px;
 }
 
 @media (max-width: 480px) {
@@ -377,6 +461,8 @@ section .section-buttons {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   margin: 11vh auto auto auto;
+  bottom: 60px;
+  position: absolute;
 }
 
 @media (max-width: 480px) {

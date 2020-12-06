@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDesktop, faMobileAlt, faTabletAlt } from '@fortawesome/free-solid-svg-icons'
 
 import ProjectsText from "../components/maintext-projects"
-import BlogText from "../components/maintext-blog"
+//import BlogText from "../components/maintext-blog"
 import ContactText from "../components/maintext-contact"
 import AboutMeText from "../components/maintext-aboutme"
 
@@ -40,22 +40,22 @@ const IndexPage = () => (
       <section className="projects" id="section-two">
         <ProjectsText />
         <div className="section-buttons">
-            <Link className="link-button" to="#section-three">scroll down</Link>
+            <Link className="link-button" to="#section-four">scroll down</Link>
             <Link className="link-button" to="#section-one">scroll up</Link>
           </div>
       </section>
-      <section className="blog" id="section-three">
+      {/* <section className="blog" id="section-three">
         <BlogText />
           <div className="section-buttons">
             <Link className="link-button" to="#section-four">scroll down</Link>
             <Link className="link-button" to="#section-two">scroll up</Link>
           </div>
-      </section>
+      </section> */}
       <section className="aboutme" id="section-four">
         <AboutMeText />  
           <div className="section-buttons">
             <Link className="link-button" to="#section-five">scroll down</Link>
-            <Link className="link-button" to="#section-three">scroll up</Link>
+            <Link className="link-button" to="#section-two">scroll up</Link>
           </div>
       </section>
       <section className="contact" id="section-five">
