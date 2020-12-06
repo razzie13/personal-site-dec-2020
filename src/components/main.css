@@ -590,7 +590,7 @@ section .section-buttons {
 
 @media (max-width: 480px) {
   section .section-buttons {
-    margin-top: 4vh;
+    display: none;
   }
 }
 

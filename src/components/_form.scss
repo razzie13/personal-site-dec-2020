@@ -16,6 +16,11 @@ form {
         width: 100%;
         padding: 6px 12px;
         margin-top: 12px;
+
+        @include mobile  {
+            width: 90%;
+            margin: auto;
+        }
     }
 
     button, input[type="reset"] {
@@ -37,6 +42,11 @@ form {
         width: 100%;
         padding: 6px 12px;
         margin-top: 12px;
+
+        @include mobile  {
+            width: 90%;
+            margin: auto;
+        }
     }
 }
 

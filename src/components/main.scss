@@ -543,7 +543,7 @@ section  {
         position: absolute;
 
         @include mobile  {
-            margin-top: 4vh;
+            display: none;
         }
     }
 
