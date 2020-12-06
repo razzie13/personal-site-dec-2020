@@ -17,7 +17,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Greg Rasmussen - Web Designer and Developer" />
       <section className="welcome" id="section-one">
-        <a></a>
+        
         <div className="centre-section">
           <h1>Welcome</h1>
           <div className="hero-area">

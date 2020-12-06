@@ -19,16 +19,16 @@ const ContactPage = () => (
                           <ul>
                               <li>Visual design of new websites for mobile, tablet, and desktop users</li>
                               <li>Creation of custom websites for small and medium sized businesses</li>
+                              <li>Building of both static and dynamic websites, which use a content management system</li>
                               <li>Creation of written site copy and blog content</li>
                               <li>Optimizing written copy for search engines</li>
+                              <li>Compatibility with Web Content Accessibility Guidelines (WCAG 2.0)</li>
                           </ul>
                       </div>
                       <div className="hero-image">
 
-                      </div>
-
-                  </div>
-                      <form method="post" action="#">
+                      {/* START CONTACT FORM */}
+                      <form method="post" action="https://formspree.io/f/mvovwozv">
                         <label>
                           Your Name
                           <input type="text" name="name" id="name" />
@@ -43,11 +43,17 @@ const ContactPage = () => (
                         </label>
                         <label>
                           Message
-                          <textarea name="message" id="message" rows="5" />
+                          <textarea name="message" id="message" rows="15" />
                         </label>
-                        <button type="submit">Send</button>
-                        <input type="reset" value="Clear" />
+                        <button type="submit">Send Email</button>
+                        <input type="reset" value="Clear Contact Form" />
                       </form> 
+                      {/* END CONTACT FORM */}
+
+                      </div>
+
+                  </div>
+                      
               </div>
       </section>
     </div>

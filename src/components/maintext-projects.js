@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faNodeJs, faSass, faShopify, faWordpress } from "@fortawesome/free-brands-svg-icons"
+import { faNodeJs, faSass, faWordpress } from "@fortawesome/free-brands-svg-icons"
 
 
 const ProjectsText = () => (

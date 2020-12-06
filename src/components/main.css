@@ -7,6 +7,43 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 24px;
+}
+
+form label {
+  margin-bottom: 36px;
+  font-weight: bold;
+  font-family: 'Nunito';
+}
+
+form input[type="text"], form input[type="email"] {
+  height: 24px;
+  border-style: none;
+  border-radius: 12px;
+  width: 100%;
+  padding: 6px 12px;
+  margin-top: 12px;
+}
+
+form button, form input[type="reset"] {
+  width: 100%;
+  margin: auto;
+  border-style: none;
+  height: 36px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 12px;
+  letter-spacing: 1.3px;
+  background-color: yellow;
+  margin-bottom: 24px;
+}
+
+form textarea {
+  border-style: none;
+  border-radius: 12px;
+  width: 100%;
+  padding: 6px 12px;
+  margin-top: 12px;
 }
 
 /* -------------------- */
@@ -213,12 +250,22 @@ header #header-inside ul li {
 
 @media (max-width: 480px) {
   .projects section:nth-child(2n+2) a {
-    color: #222F3E;
+    color: #F7F7F7;
   }
 }
 
 .projects #section-one {
   height: 100vh;
+}
+
+.projects section .centre-section a {
+  text-decoration: underline;
+  color: #222F3E;
+}
+
+.projects section .centre-section a:nth-child(1n+2) {
+  text-decoration: underline;
+  color: #222F3E;
 }
 
 .projects .hero-text p:first-child {
@@ -259,6 +306,13 @@ header #header-inside ul li {
 .contact {
   background-color: #10AC84;
   color: #F7F7F7;
+  /*
+    #section-one > div:nth-child(2) > div > div.hero-text  {
+        @include desktop  {
+            width: 100%;
+        }
+    }
+    */
 }
 
 .contact section {
@@ -271,9 +325,35 @@ header #header-inside ul li {
   visibility: visible;
 }
 
-@media (min-width: 1400px) {
-  .contact #section-one > div:nth-child(2) > div > div.hero-text {
-    width: 100%;
+@media (max-width: 768px) {
+  .contact #section-one > .centre-section:nth-child(2) > div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact #section-one > .centre-section:nth-child(2) > div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact #section-one > .centre-section:nth-child(2) > .hero-area {
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact #section-one > .centre-section:nth-child(2) > .hero-area {
+    padding-top: 0;
+    margin-top: 0;
   }
 }
 
@@ -307,6 +387,24 @@ header #header-inside ul li {
   .aboutme #section-one > div:nth-child(2) > div > div.hero-text {
     width: 100%;
   }
+}
+
+@media (max-width: 768px) {
+  .aboutme #section-one > .centre-section:nth-child(2) > .hero-area {
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutme #section-one > .centre-section:nth-child(2) > .hero-area {
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
+
+.aboutme ul {
+  padding-bottom: 24px;
 }
 
 .noh4 h4 {
@@ -397,13 +495,12 @@ section .hero-area {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    margin-top: 8vh;
   }
 }
 
 @media (max-width: 480px) {
   section .hero-area {
-    margin-top: 5vh;
+    margin-top: -8vh;
   }
 }
 
@@ -474,6 +571,10 @@ section .hero-image img {
   height: 100%;
 }
 
+section .hero-image form label {
+  font-size: 24px;
+}
+
 section .section-buttons {
   width: 100%;
   display: -webkit-box;
@@ -537,5 +638,49 @@ section .section-buttons button {
     font-size: 16px;
     padding: 6px;
   }
+}
+
+footer {
+  background-color: #222F3E;
+  color: #F7F7F7;
+  font-family: 'Nunito';
+}
+
+footer .footer-inside {
+  margin: auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1400px;
+}
+
+@media (max-width: 768px) {
+  footer .footer-inside {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+footer .footer-inside .footer-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  margin-top: 18px;
+}
+
+footer .footer-inside .footer-icons a {
+  color: #F7F7F7;
+}
+
+footer .footer-inside .footer-icons svg {
+  padding: 0 0 0 12px;
+  font-size: 24px;
 }
 /*# sourceMappingURL=main.css.map */
