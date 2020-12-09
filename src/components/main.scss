@@ -149,7 +149,9 @@ header  {
 }
 
 #section-one .link-button:last-child  {
-    visibility: hidden;
+    background-color: colour(contact);
+    color: colour(text-light);
+    visibility: visible;
 }
 
 #section-five .link-button:first-child  {
@@ -539,7 +541,7 @@ section  {
         display: flex;
         justify-content: space-evenly;
         margin: 11vh auto auto auto;
-        bottom: 60px;
+        bottom: 90px;
         position: absolute;
 
         @include mobile  {

@@ -25,6 +25,13 @@ form input[type="text"], form input[type="email"] {
   margin-top: 12px;
 }
 
+@media (max-width: 480px) {
+  form input[type="text"], form input[type="email"] {
+    width: 90%;
+    margin: auto;
+  }
+}
+
 form button, form input[type="reset"] {
   width: 100%;
   margin: auto;
@@ -44,6 +51,13 @@ form textarea {
   width: 100%;
   padding: 6px 12px;
   margin-top: 12px;
+}
+
+@media (max-width: 480px) {
+  form textarea {
+    width: 90%;
+    margin: auto;
+  }
 }
 
 /* -------------------- */
@@ -149,7 +163,9 @@ header #header-inside ul li {
 }
 
 #section-one .link-button:last-child {
-  visibility: hidden;
+  background-color: #10AC84;
+  color: #F7F7F7;
+  visibility: visible;
 }
 
 #section-five .link-button:first-child {
@@ -584,7 +600,7 @@ section .section-buttons {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   margin: 11vh auto auto auto;
-  bottom: 60px;
+  bottom: 90px;
   position: absolute;
 }
 

@@ -34,7 +34,7 @@ const IndexPage = () => (
         </div>
           <div className="section-buttons">
             <Link className="link-button" to="#section-two">scroll down</Link>
-            <Link className="link-button" to="#section-one">scroll up</Link>
+            <Link className="link-button" to="/contact/">get in touch</Link>
           </div>
       </section>
       <section className="projects" id="section-two">
