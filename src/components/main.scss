@@ -12,6 +12,8 @@ $colours: (
     contact: #10AC84,
     aboutme: #576574,
 
+    button-cta: #ff9f43,
+
     landing-dark: darken(#0ABDE3, 25%),
 
     portfolio-light: lighten(#FF6B6B, 25%),
@@ -149,8 +151,8 @@ header  {
 }
 
 #section-one .link-button:last-child  {
-    background-color: colour(contact);
-    color: colour(text-light);
+    background-color: colour(button-cta);
+    color: colour(text-dark);
     visibility: visible;
 }
 
@@ -187,7 +189,7 @@ header  {
 
 
 .welcome  {
-    opacity: 0.77;
+    opacity: 1;
     background-image: $background-image-kw-map;
     background-repeat: no-repeat;
     background-size: cover;
@@ -456,7 +458,7 @@ section  {
     h1  {
         font-family: font(main-title-font);
         text-transform: uppercase;
-        padding-top: 23vh;
+        padding-top: 18vh;
 
         @include tablet{
             padding-left: 14%;
@@ -468,7 +470,7 @@ section  {
         width: 100%;
         display: flex;
         justify-content: space-between;
-        padding-top: 10vh;
+        padding-top: 8vh;
 
         
 

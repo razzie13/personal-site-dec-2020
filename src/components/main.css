@@ -163,8 +163,8 @@ header #header-inside ul li {
 }
 
 #section-one .link-button:last-child {
-  background-color: #10AC84;
-  color: #F7F7F7;
+  background-color: #ff9f43;
+  color: #222F3E;
   visibility: visible;
 }
 
@@ -193,7 +193,7 @@ header #header-inside ul li {
 }
 
 .welcome {
-  opacity: 0.77;
+  opacity: 1;
   background-image: url("../images/kw-map.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -484,7 +484,7 @@ section .centre-section a:hover {
 section h1 {
   font-family: "Nunito", sans-serif, bold;
   text-transform: uppercase;
-  padding-top: 23vh;
+  padding-top: 18vh;
 }
 
 @media (max-width: 768px) {
@@ -502,7 +502,7 @@ section .hero-area {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 10vh;
+  padding-top: 8vh;
 }
 
 @media (max-width: 768px) {
